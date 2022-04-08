@@ -37,6 +37,7 @@ textarea {
 
 .header {
   display: flex;
+  border-bottom: 1px solid #ececec;
 }
 
 /* container */
@@ -150,6 +151,9 @@ textarea {
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -288,11 +292,15 @@ textarea {
   justify-content: center;
   width: 100%;
   height: 100%;
+
   border-radius: 50%;
   background-position: center;
   background-repeat: no-repeat;
   fill: #afb1b8;
   color: var(--primary-bg-color);
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social_icon:hover,
@@ -324,18 +332,21 @@ textarea {
   justify-content: center;
   width: 100%;
   height: 100%;
+
   border-radius: 50%;
   background-position: center;
   background-repeat: no-repeat;
   fill: var(--primary-bg-color);
   color: var(--primary-bg-color);
   background: rgba(255, 255, 255, 0.1);
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-footer_icon:hover,
 .social-footer_icon:focus {
   background-color: var(--accent-color);
-  /* fill: currentColor; */
 }
 
 .client-list {
@@ -357,15 +368,20 @@ textarea {
   text-align: center;
   width: 100%;
   height: 100%;
+
   border-radius: 4px;
+  border: 1px solid #afb1b8;
   color: var(--accent-color);
   background-color: #fff;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-logo:hover,
 .clients-logo:focus {
   border: 1px solid #2196f3;
   fill: currentColor;
+  outline: none;
 }
 
 /* Boxs */
@@ -382,8 +398,6 @@ textarea {
   fill: #afb1b8;
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
 }
 
 .box:hover,
@@ -668,7 +682,13 @@ textarea {
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  color: rgba(117, 117, 117, 0.5);
   background-color: var(--main-bg-color);
+}
+
+.footer-input:focus {
+  color: rgba(255, 255, 255, 0.6);
+  outline: none;
 }
 
 /* logo footer */
@@ -740,6 +760,9 @@ textarea {
   font-family: Roboto;
   border: none;
   text-align: center;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .curent-button {
@@ -864,8 +887,9 @@ textarea {
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
-  transition: transform, 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: opacity, transform;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
 }
 
 .flex-element-link:hover .flex-thumb,
@@ -951,7 +975,7 @@ textarea {
 
 .modal {
   position: absolute;
-  top: 20px;
+  top: 50%;
   left: 50%;
   padding: 40px;
 
@@ -962,7 +986,7 @@ textarea {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transform: translate(-50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -988,7 +1012,6 @@ textarea {
 
 .modal-icon:hover {
   fill: currentColor;
-  border-color: black;
 }
 
 .modal-header {
